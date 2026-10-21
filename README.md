@@ -22,3 +22,10 @@ data/processed/ - Cleaned and integrated datasets
 notebooks/ - Jupyter notebooks for data preparation and analysis
 
 outputs/ - Charts, tables, and analysis results
+
+## HCAHPS Patient Survey Dataset
+
+Source: https://data.cms.gov/provider-data/dataset/dgck-syfz 
+
+The original dataset was reduced to include measure ending in LINEAR_SCORE and selected columns that are relevant towards our project. This subset retains the most important columns while reducing the file size for easier storage and sharing on GitHub. The original dataset is stored locally.
+
