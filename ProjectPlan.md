@@ -4,7 +4,7 @@
 
 The goal of our project is to determine whether hospitals with higher patient experience ratings tend to have lower complication rates and mortality. We will use 3 datasets from the Centers for Medicare and Medicaid Services (CMS) that provide information about hospital ratings, patient experiences, and clinical outcomes.
 
-We will start by exploring the datasets to understand their structure, identify relevant columns, and check for issues such as missing values and duplicate records. Next, we will clean and preprocess the data by standardizing column names and datatypes, and deciding how to handle missing or unavailable data. We will then combine the data using hospital facility identifiers and assess the quality and accuracy of the data.
+We will start by exploring the datasets to understand their structure, usability, identify relevant columns, and check for issues such as missing values and duplicate records. Next, we will clean and preprocess the data by standardizing column names and datatypes, and deciding how to handle missing or unavailable data. We will then combine the data using hospital facility identifiers and assess the quality and accuracy of the data.
 
 Once we combine the datasets, we will use descriptive statistics, comparisons, visualizations, and correlation analyses to help explain our findings. We will be looking specifically at relationships between patient experience scores, complication rates, and mortality. Finally, we will document our findings, data-cleaning decisions, and limitations. As we received feedback throughout the project, we may adjust our approach to improve the analysis.
 
@@ -62,31 +62,31 @@ We plan to connect the datasets using hospital identifiers, which are expected t
 
 ### Project Planning (Due 10/22) - David Podczerwinski
 
-We will finalize the research question, identify the datasets, document sources, and submit the project plan 
+Finalize the research question, identify the datasets, assign responsibilities, and establish the project scope. Store the files and organize the repository. Determine the data lifecycle.
 
 ### Data Exploration (Due 10/29) - John Lewis
 
-Examining the datasets' structure, column names, data types, row counts, and any other relevant measures
+Inspect the datasets' file formats, data types, column names, record counts, and any other relevant measures. Document the data organization strategy and begin a data dictionary describing variables. 
 
 ### Data Quality Assessment (Due 11/5) - John Lewis + Eshan Patel
 
-Check for missing values, duplicates, inconsistent formats, and differences in reporting periods. Document the findings for each dataset.
+Assess each dataset for accuracy, completeness, timeliness, and consistency. Document the initial findings, investigate missing values and duplicates, and determine whether the datasets can be reasonably integrated.
 
 ### Data Cleaning and Integration (Due 11/12) - Eshan Patel
 
-Clean the data based on identified issues and combine the datasets using hospital identifiers. Then, check the dataset for unmatched hospitals, duplicate records, missing values, and any other issues.
+Clean the dataset as needed, including handling missing or suppressed values. Use Python/Pandas or SQL to integrate the dataset using hospital identifiers and document. Then, evaluate the integrated dataset for accuracy, completeness, timeliness, and consistency. Document the results, explaining whether the evidence supports successful integration.
 
 ### Analysis and Visualization (Due 11/19) - Elle Crisostomo
 
-Compare patient experience scores with our selected complication and mortality measures using statistics and visualizations.
+Conduct descriptive and statistical analyses to examine the relationships between patient experience scores and hospital complication and mortality measures. Create visualizations and document the methods, results, and limitations.
 
 ### Workflow and Documentation (Due 11/26) - David Podczerwinski
 
-Organize the code into seperate scripts, automate the workflow, and document the data sources, dependencies, and reproduction steps.
+Organize the code into separate scripts and connect them to an orchestrator. Automate the workflow from data acquisition through analysis. Record data sources, processing decisions, and relevant information.
 
-### Final Testing and Reporting (Due 12/4) - Whole Group
+### Reproducibility and Final Testing/Reporting (Due 12/4) - Whole Group
 
-Test the workflow from a fresh repository clone, document results and feedback, and prepare the final report.
+Document the software requirements and package versions, using relative paths, and providing clear instructions for reproducing the results from a fresh repository. Complete the data dictionary and metadata documentation to support understanding and reuse of the datasets. Test the complete workflow, review the documentation and data quality assessments, and prepare the final report and project release.
 
 ## 6. Constraints
 
