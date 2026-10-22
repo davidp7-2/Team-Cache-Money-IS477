@@ -114,6 +114,6 @@ Decide how to deal with missing, suppressed, duplicate, and unmatched records af
 
 Determine which statistical methods and visualizations are most appropriate for our analysis based on the data and techniques covered in class.
 
-Decide how to organize the processing scripts and automate the workflow
+Decide how to organize the processing scripts and automate the workflow.
 
 
