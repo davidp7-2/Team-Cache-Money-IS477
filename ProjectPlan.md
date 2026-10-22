@@ -27,7 +27,8 @@ Conduct the analysis, visualization, and interpretation.
 ## 3. Research Questions
 
 ### Primary Research Question: 
-Are hospitals with higher patient experience ratings associated with lower complication rates and mortality?
+Is there an association between hospital patient experience scores and reported complication and mortality measures across U.S. hospitals?
+
 #### Supporting Questions:
 Do hospitals with higher HCAHPS patient experience scores tend to have lower complication rates?
 
