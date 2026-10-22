@@ -96,7 +96,7 @@ The survey and clinical outcome datasets may contain multiple rows per hospital.
 
 The measures used by hospitals may differ, as well as the reporting periods. We will need to review their definitions before comparing results.
 
-The HCAHPS was too large to download into GitHub. This forced us to upload a reduced subset from the original database. We will document which measures and columns were retained.
+The HCAHPS was too large to download into GitHub. Due to this, we uploaded a reduced subset from the original database that contained the measures and columns relevant to our research questions. We will document which measures and columns were retained and how this filtering occurred in a reproducible script that can retrieve and process the original data to generate the subset we are using. This will allow others to reproduce our preparation process without relying only on our modified file.
 
 Large files, inconsistent hospital identifiers, and different dataset formats may complicate the cleaning and integration of datasets.
 
@@ -108,7 +108,7 @@ We will need to confirm the exact hospital identifier fields and verify they can
 
 Determine which complication and mortality rate measures are most appropriate to answer our research question.
 
-Examine the datasets' reporting periods and determine whether they comparable.
+Examine the datasets' reporting periods and determine whether they are comparable.
 
 Decide how to deal with missing, suppressed, duplicate, and unmatched records after inspecting the data. 
 
