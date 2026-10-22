@@ -29,13 +29,13 @@ Conduct the analysis, visualization, and interpretation.
 ### Primary Research Question: 
 Are hospitals with higher patient experience ratings associated with lower complication rates and mortality?
 #### Supporting Questions:
-Do hospitals with higher patient experience scores tend to have lower complication rates?
+Do hospitals with higher HCAHPS patient experience scores tend to have lower complication rates?
 
-Do hospitals with higher patient experience scores tend to have lower mortality rates?
+Are hospitals with higher HCAHPS patient experience scores associated with lower mortality rates?
 
 Is there an association between hospital-level HCAHPS linear mean scores and selected 30-day mortality measures?
 
-Do these relationships vary across different patient experience measures, such as nurse communication and doctor communication?
+Do these associations vary across different patient experience measures, such as nurse communication and doctor communication?
 
 We will use descriptive statistics, visualizations, and other appropriate analyses to investigate these relationships. The specific measures and methods will depend on data availability, definitions, and techniques covered in class. We will interpret the findings as associations and not a direct causation. 
 
@@ -43,19 +43,19 @@ We will use descriptive statistics, visualizations, and other appropriate analys
 ### Dataset 1: Hospital General Information
 Source: https://data.cms.gov/provider-data/dataset/xubh-q36u
 
-This dataset contains general information about hospitals, including names, locations, facility identifiers, and star ratings. We will primarily use the facility identifier to connect hospitals across the datasets. The overall star rating mat be useful for additional context when examining hospital characteristics.
+This dataset contains general information about hospitals, including names, locations, facility identifiers, and star ratings. We will primarily use the facility identifier to connect hospitals across the datasets. The overall star rating may be useful for additional context when examining hospital characteristics.
 
 ### Dataset 2: HCAHPS Patient Survey
 Source: https://data.cms.gov/provider-data/dataset/dgck-syfz
 
 This dataset contains information about patients' experiences with hospitals. It includes measures related to communication and aspects of care. We are using a reduced version of the original dataset that retains linear-score measures and selected columns relevant to the project. These scores will be used to compare patient experiences across various hospitals.
 
-### Dataset 3: Complications an Deaths
+### Dataset 3: Complications and Deaths
 Source: https://data.cms.gov/provider-data/dataset/ynj2-r877
 
 This dataset contains hospital quality measures related to complications and mortality. We will examine the available measures and use the most appropriate ones for answering our research questions. These measures will be compared with patient experience scores to investigate whether hospitals with better reported patient experiences tend to have better clinical outcomes.
 
-We plan to connect the datasets using hospital identifiers, which are expected to be labeled as Facility ID or something similar. We will verify the identifier column and ensure the data uses consistent formats. We will select or reorganize relevant measure before merging. After combining the datasets, we will check for unmatched hospitals, duplicate records, and any other outliers.
+We plan to connect the datasets using hospital identifiers, which are expected to be labeled as Facility ID or something similar. We will verify the identifier column and ensure the data uses consistent formats. As both the HCAHPS and Complications and Deaths datasets may contain multiple records per hospital, we will first need to filter or reshape the data to organize the specific measures before merging. The goal is to create a combined dataset with one row entry per hospital that includes separate columns for the selected patient experience and the clinical outcome measures. After combining the datasets, we will check for unmatched hospitals, duplicate records, and any other outliers.
 
 ## 5. Timeline
 
