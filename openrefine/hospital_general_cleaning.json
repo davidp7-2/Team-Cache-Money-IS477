@@ -1,0 +1,28 @@
+[
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+    },
+    "columnName": "Hospital overall rating",
+    "expression": "grel:if(value == \"Not Available\", null, value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hospital overall rating using expression grel:if(value == \"Not Available\", null, value)"
+    },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+    },
+    "columnName": "Hospital overall rating",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hospital overall rating using expression value.toNumber()"
+    }
+]
