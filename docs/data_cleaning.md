@@ -202,8 +202,6 @@ Before integrating this dataset with Hospital General Information and the HCAHPS
 
 ### 2. Data Quality Findings
 
-### 2. Data Quality Findings
-
 | **Column** | **Findings** |
 |---|---|
 | Facility ID | Contains six-character hospital identifiers. Values repeat across records because individual hospitals have multiple reported quality measures. |
