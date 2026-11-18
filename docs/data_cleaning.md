@@ -12,7 +12,7 @@
 
 The Hospital General Information dataset contains 5,419 hospital records. Before integration with he HCAHPS Patient Survey and Complications & Deaths datasets, we assessed the quality of the data using OpenRefine.
 
-The dataset was generally consistent and well-structured, requiring minimal cleaning.
+The dataset was generally consistent and well-structured, requiring minimal cleaning. In addition to addressing missing values and data types, we removed 29 unnecessary columns and retained nine columns relevant to our research question and integration process.
 
 ### 2. Data Quality Findings
 
@@ -42,6 +42,25 @@ Converted valid Hospital Overall Rating values from strings to numeric values us
 
 All available ratings remained within the expected range of 1-5.
 
+**Operation 3: Remove Unnecessary Columns**
+
+The original dataset contained 38 columns. Using OpenRefine, we removed 29 columns that were not necessary for our planned integration and analysis.
+
+The following nine columns were retained:
+- Facility ID
+- Facility Name
+- Address
+- City/Town
+- State
+- ZIP Code
+- Hospital Type
+- Hospital Ownership
+- Hospital Overall Rating
+
+These columns provide the hospital identifiers, geographic information, and hospital characteristics needed for our research. Facility ID will serve as the primary linkage attribute when integrating the three CMS datasets.
+
+All 5,419 hospital records were preserved during this process.
+
 ### 4. Additional Validation
 
 - Confirmed that Facility IDs remained six-character strings with leading zeros preserved.
@@ -57,12 +76,12 @@ All 5,419 hospital records were retained, including the 2,245 hospitals without 
 
 ### 6. Reproducibility
 
-The cleaning operations were exported from OpenRefine as a JSON recipe.
+The JSON recipe includes the transformations applied to Hospital Overall Rating and the removal of unnecessary columns, allowing the cleaned nine-column dataset to be reproduced from the original 38-column dataset.
 
 **Files:**
 
 - Original: data/raw/Hospital_General_Information.csv
-- Cleaned: data/csv/hospital_general_cleaned.csv
+- Cleaned: data/csv/Hospital-General-Information-Cleaned.csv
 - OpenRefine recipe: openrefine/hospital_general_cleaning.json
 
 To reproduce the cleaning, import the original CSV into OpenRefine, apply the operations from the JSON recipe using Undo / Redo -> Apply, and export the result as a CSV. The original dataset is preserved unchanged.
