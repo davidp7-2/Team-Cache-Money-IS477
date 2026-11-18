@@ -80,9 +80,9 @@ The JSON recipe includes the transformations applied to Hospital Overall Rating 
 
 **Files:**
 
-- Original: data/raw/Hospital_General_Information.csv
-- Cleaned: data/csv/Hospital-General-Information-Cleaned.csv
-- OpenRefine recipe: openrefine/hospital_general_cleaning.json
+- Original: `data/raw/Hospital_General_Information.csv`
+- Cleaned: `data/csv/Hospital-General-Information-Cleaned.csv`
+- OpenRefine recipe: `openrefine/hospital_general_cleaning.json`
 
 To reproduce the cleaning, import the original CSV into OpenRefine, apply the operations from the JSON recipe using Undo / Redo -> Apply, and export the result as a CSV. The original dataset is preserved unchanged.
 
@@ -99,7 +99,7 @@ To reproduce the cleaning, import the original CSV into OpenRefine, apply the op
 
 The original HCAHPS Patient Survey file contains 512,209 records and 22 columns. Most rows report the percentage of patients giving each answer to each question. Our research questions need one summary score per hospital per measure, so cleaning happened in two steps:
 
-1. **Reduction (Python):** scripts/preprocessing/reduce_hcahps_data.py reads the original CMS zip and keeps only the 52,657 linear mean score rows and 11 relevant columns. Values are copied unchanged. This step is scripted rather than done by hand because the full file (about 173 MB) is too large to store uncompressed on GitHub, and a script makes the subset reproducible.
+1. **Reduction (Python):** `scripts/preprocessing/reduce_hcahps_data.py` reads the original CMS zip and keeps only the 52,657 linear mean score rows and 11 relevant columns. Values are copied unchanged. This step is scripted rather than done by hand because the full file (about 173 MB) is too large to store uncompressed on GitHub, and a script makes the subset reproducible.
 2. **Cleaning (OpenRefine):** the reduced file was cleaned in OpenRefine using the operations below.
 
 All 52,657 records and all 4,787 hospitals were preserved.
@@ -170,17 +170,17 @@ All 52,657 rows were kept, including the 1,606 hospitals with no available score
 
 **Files:**
 
-- Original: data/raw/HCAHPS_Patient_Survey.zip (checksum in data/raw/HCAHPS_Patient_Survey.sha256)
-- Reduced (OpenRefine input): data/raw/HCAHPS_Patient_Survey_Reduced.csv
-- Cleaned: data/csv/HCAHPS-Survey-Cleaned.csv
-- OpenRefine recipe: openrefine/HCAHPS-Survey-Cleaning.json
+- Original: `data/raw/HCAHPS_Patient_Survey.zip` (checksum in data/raw/HCAHPS_Patient_Survey.sha256)
+- Reduced (OpenRefine input): `data/raw/HCAHPS_Patient_Survey_Reduced.csv`
+- Cleaned: `data/csv/HCAHPS-Survey-Cleaned.csv`
+- OpenRefine recipe: `openrefine/HCAHPS-Survey-Cleaning.json`
 
 To reproduce the cleaning:
 
-1. Run python scripts/acquisitions/acquire_hcahps_data.py to verify the zip's SHA-256 checksum.
-2. Run python scripts/preprocessing/reduce_hcahps_data.py to rebuild the reduced CSV.
-3. Import data/raw/HCAHPS_Patient_Survey_Reduced.csv into OpenRefine with "Parse cell text into numbers, dates" turned off, so Facility IDs keep their leading zeros.
-4. Apply openrefine/HCAHPS-Survey-Cleaning.json using Undo / Redo -> Apply, and export the result as CSV.
+1. Run python `scripts/acquisitions/acquire_hcahps_data.py` to verify the zip's SHA-256 checksum.
+2. Run python `scripts/preprocessing/reduce_hcahps_data.py` to rebuild the reduced CSV.
+3. Import `data/raw/HCAHPS_Patient_Survey_Reduced.csv` into OpenRefine with "Parse cell text into numbers, dates" turned off, so Facility IDs keep their leading zeros.
+4. Apply `openrefine/HCAHPS-Survey-Cleaning.json` using Undo / Redo -> Apply, and export the result as CSV.
 
 The original zip is preserved unchanged.
 
@@ -258,8 +258,8 @@ The JSON recipe includes the transformations applied to Hospital Overall Rating 
 
 **Files:**
 
-- Original: data/raw/Complications_and_Deaths-Hospital.csv
-- Cleaned: data/csv/Complications-Deaths-Cleaned.csv
-- OpenRefine recipe: openrefine/Complications-Deaths-Cleaning.json
+- Original: `data/raw/Complications_and_Deaths-Hospital.csv`
+- Cleaned: `data/csv/Complications-Deaths-Cleaned.csv`
+- OpenRefine recipe: `openrefine/Complications-Deaths-Cleaning.json`
 
 To reproduce the cleaning, import the original CSV into OpenRefine, apply the operations from the JSON recipe using Undo / Redo -> Apply, and export the result as a CSV. The original dataset is preserved unchanged.
