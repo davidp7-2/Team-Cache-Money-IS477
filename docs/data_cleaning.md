@@ -183,3 +183,73 @@ To reproduce the cleaning:
 4. Apply openrefine/HCAHPS-Survey-Cleaning.json using Undo / Redo -> Apply, and export the result as CSV.
 
 The original zip is preserved unchanged.
+
+## Dataset 3: Hospital Complications and Deaths
+
+**Source:** Centers for Medicare & Medicaid Services (CMS)
+
+**Dataset:** Complications and Deaths – Hospital
+
+**Dataset ID:** `ynj2-r877`
+
+**Source URL:** https://data.cms.gov/provider-data/dataset/ynj2-r877
+
+### 1. Overview
+
+The Hospital Complications and Deaths dataset contains 95,740 records and 18 variables. It provides hospital-level quality measures related to complications, mortality, and patient outcomes.
+
+Before integrating this dataset with Hospital General Information and the HCAHPS Patient Survey, we assessed its structure and data quality. Particular attention was given to Facility ID and Score because of their importance to the integration process and subsequent analysis.
+
+### 2. Data Quality Findings
+
+| **Field** | **Findings** |
+|---|---|
+| Facility ID | Identifies hospitals; repeated across multiple measure-level records |
+| Measure Information | Distinguishes individual hospital quality measures |
+| Score | Most values fall between 1 and 20; many extend to 100, with one observation above 100 |
+| Dataset Structure | 95,740 records across 18 variables |
+
+The repeated Facility IDs reflect the dataset's measure-level structure rather than duplicate hospital records.
+
+### 3. Cleaning Operations
+
+**Operation 1: Review Score Values**
+
+Examined the Score distribution to identify unusual values and potential inconsistencies. Most observations fell between 1 and 20, although many extended to 100 and one exceeded 100. These values were evaluated in the context of their associated measures rather than automatically removed.
+
+**Operation 2: Evaluate Missing Scores**
+
+Reviewed missing Score values and distinguished unavailable results from actual numerical scores. Missing values or non-numeric entries were replaced will null values.
+
+**Operation 3: Preserve Measure-Level Records**
+
+Retained repeated Facility IDs because each record represents a potentially distinct quality measure. Removing these records would eliminate valid hospital-level information.
+
+### 4. Additional Validation
+
+- Reviewed all 18 variables and their roles in identifying hospitals and reported measures.
+- Examined the Score distribution, including the observation exceeding 100.
+- Reviewed the CMS definition of the Total Performance Score (TPS), which incorporates weighted quality domains.
+- Confirmed that repeated Facility IDs were consistent with the dataset's measure-level structure.
+
+### 5. Missing Data Decisions
+
+Missing Score values were not imputed because unavailable results should not be interpreted as zero or assigned estimated performance values. These observations were retained, and the availability of scores will be considered when conducting comparisons and analysis.
+
+### 6. Integration with Other CMS Datasets
+
+Facility ID serves as the common linkage field across Hospital General Information, HCAHPS Patient Survey, and Hospital Complications and Deaths.
+
+Hospital General Information contains one record for each of its 5,419 unique Facility IDs, while the Complications and Deaths dataset contains multiple measure-level records for individual hospitals. This creates a one-to-many relationship, allowing hospital characteristics to be associated with multiple quality measures while preserving the original measure-level information.
+
+### 7. Reproducibility
+
+The JSON recipe includes the transformations applied to Hospital Overall Rating and the removal of unnecessary columns, allowing the cleaned nine-column dataset to be reproduced from the original 38-column dataset.
+
+**Files:**
+
+- Original: data/raw/Complications_and_Deaths-Hospital.csv
+- Cleaned: data/csv/Complications-Deaths-Cleaned.csv
+- OpenRefine recipe: openrefine/Complications-Deaths-Cleaning.json
+
+To reproduce the cleaning, import the original CSV into OpenRefine, apply the operations from the JSON recipe using Undo / Redo -> Apply, and export the result as a CSV. The original dataset is preserved unchanged.
