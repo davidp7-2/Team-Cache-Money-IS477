@@ -1,0 +1,85 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HCAHPS Linear Mean Value",
+    "expression": "grel:if(value == \"Not Available\", null, value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column HCAHPS Linear Mean Value using expression grel:if(value == \"Not Available\", null, value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HCAHPS Linear Mean Value",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column HCAHPS Linear Mean Value using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Number of Completed Surveys",
+    "expression": "grel:if(value == \"Not Available\", null, value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Number of Completed Surveys using expression grel:if(value == \"Not Available\", null, value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Number of Completed Surveys",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Number of Completed Surveys using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Start Date",
+    "expression": "grel:value.toDate(\"MM/dd/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Start Date using expression grel:value.toDate(\"MM/dd/yyyy\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "End Date",
+    "expression": "grel:value.toDate(\"MM/dd/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column End Date using expression grel:value.toDate(\"MM/dd/yyyy\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Patient Survey Star Rating",
+    "description": "Remove column Patient Survey Star Rating"
+  }
+]
