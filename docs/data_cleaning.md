@@ -202,12 +202,24 @@ Before integrating this dataset with Hospital General Information and the HCAHPS
 
 ### 2. Data Quality Findings
 
-| **Field** | **Findings** |
+### 2. Data Quality Findings
+
+| **Column** | **Findings** |
 |---|---|
-| Facility ID | Identifies hospitals; repeated across multiple measure-level records |
-| Measure Information | Distinguishes individual hospital quality measures |
-| Score | Most values fall between 1 and 20; many extend to 100, with one observation above 100 |
-| Dataset Structure | 95,740 records across 18 variables |
+| Facility ID | Contains six-character hospital identifiers. Values repeat across records because individual hospitals have multiple reported quality measures. |
+| Facility Name | Provides the corresponding hospital name for each record. |
+| Address, City/Town, State, ZIP Code, County/Parish | Provide geographic information for identifying hospital locations. These fields were complete. |
+| Telephone Number | Provides hospital contact information; no missing values identified. |
+| Measure ID | Identifies the specific quality measure associated with each record. |
+| Measure Name | Describes the complication, mortality, or other quality measure being reported. |
+| Compared to National | Indicates how a hospital's performance compares with the national benchmark. |
+| Denominator | Reports the number of cases used in calculating the corresponding measure. |
+| Score | Approximately 46% of values were missing. Most available scores fell between 1 and 20, although many extended to 100 and one observation surpassed 100. |
+| Lower Estimate, Higher Estimate | Provide the lower and upper estimates associated with the reported measure. |
+| Footnote | Provides additional context or explanations for individual measure results. |
+| Start Date, End Date | Identify the reporting period associated with each measure. Data extend through June 30, 2025. |
+
+The repeated Facility IDs are expected because the dataset contains multiple measure-level records for individual hospitals. They do not indicate duplicate hospital records.
 
 The repeated Facility IDs reflect the dataset's measure-level structure rather than duplicate hospital records.
 
