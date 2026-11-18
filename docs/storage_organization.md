@@ -30,7 +30,7 @@ We use descriptive filenames that identify the dataset and its purpose.
 
 For example:
 - Hospital_General_Information.csv - Original CMS dataset
-- hospital_general_cleaned.csv - Cleaned Hospital General Information dataset
+- Hospital-General-Information-Cleaned.csv - Cleaned Hospital General Information dataset
 - acquire_hospital_data.py - Python script for downloading and verifying the dataset
 - hospital_general_cleaning.json - OpenRefine cleaning operations
 
