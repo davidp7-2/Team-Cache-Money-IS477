@@ -1,0 +1,173 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hospital overall rating",
+    "expression": "grel:if(value == \"Not Available\", null, value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hospital overall rating using expression grel:if(value == \"Not Available\", null, value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hospital overall rating",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hospital overall rating using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TE Group Footnote",
+    "description": "Remove column TE Group Footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Facility TE Measures",
+    "description": "Remove column Count of Facility TE Measures"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TE Group Measure Count",
+    "description": "Remove column TE Group Measure Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pt Exp Group Footnote",
+    "description": "Remove column Pt Exp Group Footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Facility Pt Exp Measures",
+    "description": "Remove column Count of Facility Pt Exp Measures"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pt Exp Group Measure Count",
+    "description": "Remove column Pt Exp Group Measure Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "READM Group Footnote",
+    "description": "Remove column READM Group Footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of READM Measures Worse",
+    "description": "Remove column Count of READM Measures Worse"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of READM Measures No Different",
+    "description": "Remove column Count of READM Measures No Different"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of READM Measures Better",
+    "description": "Remove column Count of READM Measures Better"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Facility READM Measures",
+    "description": "Remove column Count of Facility READM Measures"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "READM Group Measure Count",
+    "description": "Remove column READM Group Measure Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Safety Group Footnote",
+    "description": "Remove column Safety Group Footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Safety Measures Worse",
+    "description": "Remove column Count of Safety Measures Worse"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Safety Measures No Different",
+    "description": "Remove column Count of Safety Measures No Different"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Safety Measures Better",
+    "description": "Remove column Count of Safety Measures Better"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Facility Safety Measures",
+    "description": "Remove column Count of Facility Safety Measures"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Safety Group Measure Count",
+    "description": "Remove column Safety Group Measure Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MORT Group Footnote",
+    "description": "Remove column MORT Group Footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of MORT Measures Worse",
+    "description": "Remove column Count of MORT Measures Worse"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of MORT Measures No Different",
+    "description": "Remove column Count of MORT Measures No Different"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of MORT Measures Better",
+    "description": "Remove column Count of MORT Measures Better"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Count of Facility MORT Measures",
+    "description": "Remove column Count of Facility MORT Measures"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MORT Group Measure Count",
+    "description": "Remove column MORT Group Measure Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hospital overall rating footnote",
+    "description": "Remove column Hospital overall rating footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "County/Parish",
+    "description": "Remove column County/Parish"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Telephone Number",
+    "description": "Remove column Telephone Number"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Emergency Services",
+    "description": "Remove column Emergency Services"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Meets criteria for birthing friendly designation",
+    "description": "Remove column Meets criteria for birthing friendly designation"
+  }
+]
