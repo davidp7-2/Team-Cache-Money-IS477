@@ -26,7 +26,7 @@ The dataset was generally consistent and well-structured, requiring minimal clea
 | ZIP Code | All 5,419 values contain exactly 5 digits |
 | Core Identification Fields | No missing values | 
 
-### 3. Cleaning Options
+### 3. Cleaning Operations
 
 **Operation 1: Standardize Missing Ratings**
 
