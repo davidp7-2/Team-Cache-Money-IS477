@@ -9,7 +9,7 @@ Our project uses three datasets from the Centers for Medicare & Medicaid Service
 
 We acquire the datasets programmatically to support transparency, data integration, and reproducibility.
 
-This document currently describes acquisition of the Hospital General Information dataset. **Acquisition details for the remaining datasets will be added as their scripts are completed.**
+This document currently describes acquisition of the Hospital General Information and HCAHPS Patient Survey datasets. **Acquisition details for the remaining dataset will be added as its script is completed.**
 
 ## 2. Hospital General Information
 
@@ -59,3 +59,48 @@ All data cleaning occurs separately, and cleaned data is exported into data/csv/
 
 This ensures the original source remains available for verification and reproduction.
 
+
+## 5. HCAHPS Patient Survey
+
+**Source:** Centers for Medicare & Medicaid Services (CMS)
+
+**Dataset ID:** dgck-syfz
+
+**Source URL:** https://data.cms.gov/provider-data/dataset/dgck-syfz
+
+**Reporting period of the version used:** January 1, 2025 to December 31, 2025
+
+**Downloaded file:** data/raw/HCAHPS_Patient_Survey.zip (11.5 MB; contains "HCAHPS Patient Survey.csv", 173 MB)
+
+**Integrity script:** scripts/acquisitions/acquire_hcahps_data.py
+
+**Reduction script:** scripts/preprocessing/reduce_hcahps_data.py
+
+### Acquisition Process
+
+1. The HCAHPS Patient Survey dataset was downloaded from the CMS Provider Data Catalog as a zip file and saved to data/raw/.
+2. The zip is stored in the repository because it is under GitHub's 50 MB limit, while the uncompressed CSV is not.
+3. The integrity script computes the zip's SHA-256 checksum and compares it with the expected value in data/raw/HCAHPS_Patient_Survey.sha256. It exits with an error if they do not match.
+4. The reduction script reads the CSV directly from the zip and writes the 52,657 linear mean score rows to data/raw/HCAHPS_Patient_Survey_Reduced.csv, which is the input for OpenRefine cleaning.
+
+### Integrity Verification
+
+The SHA-256 checksum recorded for the acquired HCAHPS Patient Survey zip is:
+
+e55d624ca61d652f476f7d718deaf55d72053f8c921bdc67c1a3d6516e40bbec
+
+CMS replaces this dataset with each quarterly refresh, so a new download from the source URL will cover a different reporting period and have a different checksum. The committed zip is the version used in this project.
+
+### Reproducing Data Acquisition
+
+From the root directory of the GitHub repository, run:
+
+python scripts/acquisitions/acquire_hcahps_data.py
+
+python scripts/preprocessing/reduce_hcahps_data.py
+
+Both scripts use only the Python standard library.
+
+### Version Note
+
+An earlier reduced file (patient_survey_reduced.csv, reporting period October 1, 2024 to September 30, 2025) was used during project planning. The original CMS file it was built from is no longer published, so it could not be regenerated. It was replaced by the version above, which keeps the original download in the repository and rebuilds the subset with a script.
