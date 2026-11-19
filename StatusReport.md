@@ -164,7 +164,12 @@ Overall, we have completed the major data preparation and integration stages of 
 
 ## Contributions
 
-**David:**
+**David:** 
+- Organized the repository
+- Cleaned the Hospital General Information dataset while documenting the acquisition, data quality, data dictionary, and data cleaning along the way, to prepare the dataset for integration
+- Created python scripts for acquisition and preprocessing of the Hospital General Information dataset
+- Integrated the three datasets (python script) and documented the results and methodology
+- Contributed to the creation of the Status Report
 
 **John:**
 
