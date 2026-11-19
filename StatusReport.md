@@ -172,7 +172,9 @@ Overall, we have completed the major data preparation and integration stages of 
 - Contributed to the creation of the Status Report
 
 **John:**
-
+- Cleaned the Hospital Complications and Deaths dataset while documenting the acquisition, data quality, data dictionary, and data cleaning along the way, to prepare the dataset for integration
+- Created python scripts for acquisition and preprocessing of the Hospital Complications and Deaths dataset
+- Contributed to the creation of the Status Report
 **Eshan:**
 
 **Elle:**
