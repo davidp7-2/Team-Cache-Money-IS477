@@ -34,7 +34,7 @@ The Complications and Deaths dataset contained 95,740 records and 18 columns. We
 
 An important discovery was the HCAHPS and Complications and Deaths contain multiple records per hospital, unlike Hospital General Information. This influenced our integration strategy.
 
-Relevant variable definitions and dataset characteristics are documented in `data_dictionat.md`.
+Relevant variable definitions and dataset characteristics are documented in `data_dictionary.md`.
 
 ### Data Quality Assessment - Completed
 
