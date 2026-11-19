@@ -100,7 +100,58 @@ The Hospital General Information dataset was assessed and cleaned before integra
 - Patient Survey Star Rating was removed because it is "Not Applicable" on every linear-score row
 - The original zip is preserved without modification
 
-### 4. Integration Strategy
+
+## 3. Hospital Complications and Deaths
+
+**Source:** Centers for Medicare & Medicaid Services (CMS), Provider Data Catalog.
+
+**Source URL:** [Hospital Complications and Deaths](https://data.cms.gov/provider-data/dataset/ynj2-r877)
+
+**Original dataset:** 95,740 records and 18 columns.
+
+**Cleaned dataset:** 95,740 records and 18 columns.
+
+**Unit of observation:** One hospital-specific quality measure per record, identified by the combination of Facility ID and Measure ID. Each hospital may have multiple records because it reports results for multiple quality measures.
+
+### Selected Variables
+
+| **Variable** | **Data Type** | **Description** |
+|---|---|---|
+| Facility ID | String | Unique six-character hospital identifier used to integrate the dataset with Hospital General Information and HCAHPS Patient Survey. |
+| Facility Name | String | Name of the hospital. |
+| Address | String | Street address of the hospital. |
+| City/Town | String | City or town where the hospital is located. |
+| State | String | Two-character abbreviation identifying the state or U.S. territory where the hospital is located. |
+| ZIP Code | String | Five-digit postal code identifying the hospital's location. |
+| County/Parish | String | County or parish where the hospital is located. |
+| Telephone Number | String | Primary telephone number for the hospital. |
+| Measure ID | String | Unique identifier assigned to the specific hospital quality measure. |
+| Measure Name | String | Descriptive name of the quality measure being reported, such as complications following hip or knee replacement or hospital-wide mortality. |
+| Compared to National | Categorical | Indicates how the hospital's performance compares with the national rate. |
+| Denominator | Integer | Number of eligible cases or observations used to calculate the reported quality measure. |
+| Score | Numeric | Reported value for the hospital's performance on the specified quality measure. |
+| Lower Estimate | Numeric | Lower bound of the estimated confidence interval, when available. |
+| Higher Estimate | Numeric | Upper bound of the estimated confidence interval, when available. |
+| Footnote | String | Additional explanatory information or qualifications associated with the reported measure. |
+| Start Date | Date | Beginning date of the reporting period used to calculate the quality measure. |
+| End Date | Date | Ending date of the reporting period used to calculate the quality measure. |
+
+### Data Quality Considerations
+
+The Hospital Complications and Deaths dataset was assessed and cleaned before integration.
+
+- All 95,740 records were retained.
+- Facility IDs were preserved as strings to maintain consistent hospital identifiers and support integration with the other datasets.
+- Facility IDs are not unique within this dataset because each hospital can have multiple quality-measure records.
+- Measure IDs were retained to distinguish between different quality measures reported for the same hospital.
+- The Score column was reviewed for completeness and validity. Score values vary depending on the specific quality measure, so they should not be interpreted as directly comparable across all records.
+- Fields containing "Not Available" were preserved as unavailable values rather than converted to zero.
+- Lower Estimate and Higher Estimate may be unavailable for certain measures.
+- ZIP Codes and telephone numbers were preserved as strings to maintain their formatting.
+- Start Date and End Date were retained to identify the reporting period associated with each quality measure.
+- The dataset retains all 18 original columns, preserving the information needed for analysis and integration.
+
+### 5. Integration Strategy
 
 The facility ID column will serve as the primary linkage key across all three datasets.
 
