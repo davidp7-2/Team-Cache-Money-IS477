@@ -101,7 +101,7 @@ The Hospital General Information dataset was assessed and cleaned before integra
 - The original zip is preserved without modification
 
 
-## 3. Hospital Complications and Deaths
+## 4. Hospital Complications and Deaths
 
 **Source:** Centers for Medicare & Medicaid Services (CMS), Provider Data Catalog.
 
