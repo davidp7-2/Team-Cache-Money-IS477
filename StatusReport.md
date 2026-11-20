@@ -179,3 +179,5 @@ Overall, we have completed the major data preparation and integration stages of 
 **Eshan:**
 
 **Elle:**
+- Conducted exploratory data analysis on combined data 
+- Created basic preliminary data visualizations relevant to project goals and objectives (file uploaded in scripts folder)
